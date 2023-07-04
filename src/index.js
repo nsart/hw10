@@ -40,7 +40,7 @@ function catCard() {
           return;
         }
         const catCard = data.map(({url, breeds})=>{
-            return htmlInsert = `<div class='catCard' id="parent">
+            return `<div class='cat-card' id="parent">
             <img src=${url} alt=${breeds[0].name} width="auto">            
             <H2>${breeds[0].name}</H2>
             <p id="child">${breeds[0].description}</p>
@@ -59,7 +59,7 @@ function catCard() {
         hideLoaders();
         hideSelect();
         refs.catinfoel.classList.add('hidden');
-        Notify.failure(`${refs.errorRef.textContent}`, notiOps);
+        Notify.failure(`${refs.errorel.textContent}`);
       });
   }
 
